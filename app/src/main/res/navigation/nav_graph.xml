@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="com.example.viewdemoapp.feature_cart.presentation.main.MainFragment"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_CategoryDetailsFragment"
+            app:destination="@id/CategoryDetailsFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_ProductDetailsFragment"
+            app:destination="@id/ProductDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CategoryDetailsFragment"
+        android:name="com.example.viewdemoapp.feature_cart.presentation.category_details.CategoryDetailsFragment"
+        tools:layout="@layout/fragment_category_details">
+
+        <action
+            android:id="@+id/action_CategoryDetailsFragment_to_ProductDetailsFragment"
+            app:destination="@id/ProductDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProductDetailsFragment"
+        android:name="com.example.viewdemoapp.feature_cart.presentation.product_details.ProductDetailsFragment"
+        tools:layout="@layout/fragment_product_details">
+    </fragment>
+    <fragment
+        android:id="@+id/ShoppingCartFragment"
+        android:name="com.example.viewdemoapp.feature_cart.presentation.shopping_cart.ShoppingCartFragment"
+        tools:layout="@layout/fragment_shopping_cart">
+
+        <action
+            android:id="@+id/action_ShoppingCartFragment_to_ProductDetailsFragment"
+            app:destination="@id/ProductDetailsFragment" />
+    </fragment>
+</navigation>
